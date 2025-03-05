@@ -1,0 +1,21 @@
+import React from "react";
+import Navbar from "../src/components/NavBar";
+import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
+import Proyectos from "./pages/Proyectos";
+import Contact from "./pages/Contact";
+
+const App: React.FC = () => {
+  return (
+    <div className="">
+      <Navbar />
+      <Home/>
+      <AboutMe/>
+      <Proyectos/>
+      <Contact/>
+      {/* Aquí irán las secciones */}
+    </div>
+  );
+};
+
+export default App;
