@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   return (
     <section
-    id="contact"
+      id="contact"
       ref={ref}
       className="flex flex-col xl:flex-row items-center gap-10 px-14 sm:px-20 2xl:px-96  "
     >
@@ -33,7 +33,7 @@ const ContactForm = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <img
-          src="/assets/img/ContactCoding.jpg"
+          src="/assets/img/ContactCoding.jpeg"
           alt="Contacto"
           className="rounded-lg shadow-md w-full h-64 xl:h-auto  object-cover"
         />
