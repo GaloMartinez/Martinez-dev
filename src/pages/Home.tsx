@@ -14,7 +14,7 @@ export default function Home() {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -150 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">
+          <h1 className="text-4xl sm:text-5xl 2xl:text-5xl font-bold text-black">
           Desarrollador Frontend & Diseñador Web
           </h1>
           <p className="text-lg sm:text-lg 2xl:text-xl text-gray-600 mt-4 pb-8">
