@@ -84,7 +84,7 @@ const AboutMe: React.FC = () => {
           transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
         >
           <img
-            src="/public/assets/img/img-aboutme.jpg"
+            src="/assets/img/img-aboutme.jpg"
             alt="About me"
             className=" w-full h-150 object-cover rounded-lg shadow-lg"
           />

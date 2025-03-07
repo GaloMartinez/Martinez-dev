@@ -33,7 +33,7 @@ const ContactForm = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <img
-          src="/public/assets/img/ContactCoding.jpeg"
+          src="/assets/img/ContactCoding.jpg"
           alt="Contacto"
           className="rounded-lg shadow-md w-full h-64 xl:h-auto  object-cover"
         />
