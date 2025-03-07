@@ -1,12 +1,9 @@
 import { StyledEngineProvider, ThemeProvider } from '@mui/material';
-import { SnackbarProvider } from 'notistack';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { QueryClientProvider } from 'react-query';
-import { RouterProvider } from 'react-router-dom';
 import './index.css';
 import { queryClient } from './react-query/query-client.ts';
-
 import { createMuiTheme } from './styles/mui-theme.ts';
 import './styles/tailwind.css';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider/LocalizationProvider';

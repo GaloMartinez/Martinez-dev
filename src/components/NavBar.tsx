@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
+                    // transition={{ duration: 0.2 }}
                     className="absolute right-0 mt-2 w-48 origin-top-right rounded-lg border border-gray-200  bg-white shadow-md focus:outline-none"
                   >
                     {["Home", "About", "Projects", "Contact"].map((item, index) => (
