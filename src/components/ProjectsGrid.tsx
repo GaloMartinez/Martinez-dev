@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { CardTitle } from "./ui/card";
 
 const projects = [
-  { title: "APM Abogados", description: "Tienda online con React y Firebase.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
-  { title: "La bella pizza italiana", description: "Panel de administración con .NET.", image: "/assets/img/gastronomic-restaurant.png", link: "https://gastronomic-restaurant.netlify.app/" },
-  { title: "Vexa Soluciones", description: "Mi portafolio web con Tailwind y React.", image: "/assets/img/vexa-software.png", link: "https://vexasoftware.netlify.app/" },
-  { title: "Destileria Fernandez Latino", description: "Blog con Next.js y Markdown.", image: "/assets/img/proyecto-destileria.png", link: "https://destileriafernandezlatino.com" },
-  { title: "Moviesflix", description: "Aplicación de chat en tiempo real con Socket.io.", image: "/assets/img/moviesflix.jpg", link: "https://trailersmoviesapp.netlify.app" },
-  { title: "Detailing Shop", description: "App de productividad con TypeScript y Zustand.", image: "/assets/img/detailingshop.png", link: "https://detailingshop.netlify.app/" },
+  { title: "APM Abogados", description: "Tienda online con React, Tailwind y Firebase.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
+  { title: "La bella pizza italiana", description: "Web gastronomica realizada con React, Bootstrap y Firebase", image: "/assets/img/gastronomic-restaurant.png", link: "https://gastronomic-restaurant.netlify.app/" },
+  { title: "Vexa Soluciones", description: "Web realizada con React y Css", image: "/assets/img/vexa-software.png", link: "https://vexasoftware.netlify.app/" },
+  { title: "Destileria Fernandez Latino", description: "Web destileria realizada con React y CSS", image: "/assets/img/proyecto-destileria.png", link: "https://destileriafernandezlatino.com" },
+  { title: "Moviesflix", description: "Web trailers realizada con React y Bootstrap", image: "/assets/img/moviesflix.jpg", link: "https://trailersmoviesapp.netlify.app" },
+  { title: "Detailing Shop", description: "E-commerce realizado con Javascript, Tailwind y Firebase", image: "/assets/img/detailingshop.png", link: "https://detailingshop.netlify.app/" },
 ];
 
 const ProjectsGrid = () => {
@@ -42,7 +42,7 @@ const ProjectsGrid = () => {
   return (
     <section ref={ref} className="py-36 px-14 sm:px-20 2xl:px-96">
 
-      {/* Contenedor de la grilla con animación en función del scroll */}
+   
       <motion.div
 
         initial={{ opacity: 0, y: 50 }}
@@ -60,7 +60,7 @@ const ProjectsGrid = () => {
               transition={{ duration: 0.3 }}
               whileHover={{ scale: 1.05 }}
             >
-              {/* Imagen de fondo */}
+             
 
               < img
                 src={project.image}
@@ -69,7 +69,7 @@ const ProjectsGrid = () => {
               />
 
 
-              {/* Overlay con info al hacer hover */}
+              
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/70 p-4 text-center" >
                   <CardTitle className="text-lg font-semibold">{project.title}</CardTitle>

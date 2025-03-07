@@ -31,10 +31,10 @@ const AboutMe: React.FC = () => {
   }, []);
 
   return (
-    <section id="about" ref={ref} className="w-full py-16 h-screen bg-gray-100 flex justify-center  ">
+    <section id="sobre mi" ref={ref} className="w-full py-16 h-screen bg-gray-100 flex justify-center  ">
       <div className="flex flex-col-reverse  xl:flex-row-reverse items-center gap-10 px-14 sm:px-20 2xl:px-96">
         
-        {/* Contenido de texto con animación según la dirección del scroll */}
+       
         <motion.div
           className=" xl:w-1/2  "
           initial={{ opacity: 0, y: 50 }}
@@ -43,16 +43,16 @@ const AboutMe: React.FC = () => {
         >
           <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">Sobre Mi</h1>
           <p className="mt-4 text-lg sm:text-lg 2xl:text-xl text-gray-600">
-            Soy un <strong>desarrollador frontend</strong> con experiencia en <strong>JavaScript, TypeScript, React y .NET</strong>,
+            Soy un <strong>desarrollador Frontend</strong> con experiencia en <strong>JavaScript, TypeScript, React y .NET</strong>,
             especializado en la creación de páginas web dinámicas, intuitivas y eficientes.
             Me apasiona desarrollar soluciones digitales con un enfoque en el rendimiento,
             la accesibilidad y una excelente experiencia de usuario.
           </p>
 
-          {/* Tarjetas de habilidades con animación de hover */}
+          
           <div className="flex justify-center md:justify-start gap-4 mt-6">
             <motion.a 
-              href="https://linkedin.com/in/tuusuario" 
+              href="https://www.linkedin.com/in/galomartinez1/" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.01 }}
@@ -63,7 +63,7 @@ const AboutMe: React.FC = () => {
             </motion.a>
 
             <motion.a 
-              href="https://github.com/tuusuario" 
+              href="https://github.com/GaloMartinez" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.01 }}
@@ -76,7 +76,7 @@ const AboutMe: React.FC = () => {
           <TechSlider/>
         </motion.div>
 
-        {/* Imagen con animación según la dirección del scroll */}
+        
         <motion.div
           className="xl:w-1/2 flex justify-center"
           initial={{ opacity: 0, scale: 0.8 }}

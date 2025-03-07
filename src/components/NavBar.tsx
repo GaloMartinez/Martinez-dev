@@ -24,14 +24,14 @@ const Navbar: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Logo */}
-      <a href="#home" className="text-3xl font-bold text-gray-900">
+     
+      <a href="#inicio" className="text-3xl font-bold text-gray-900">
         GM.
       </a>
 
-      {/* Menú principal en pantallas grandes */}
+    
       <div className="hidden lg:flex space-x-8 text-lg text-gray-900 font-medium">
-        {["Home", "About", "Projects", "Contact"].map((text, index) => (
+        {["Inicio", "Sobre mi", "Proyectos", "Contacto"].map((text, index) => (
           <motion.div
             key={index}
             className="relative overflow-hidden h-6 flex justify-center items-center"
@@ -59,17 +59,17 @@ const Navbar: React.FC = () => {
         ))}
       </div>
 
-      {/* Menú desplegable en pantallas pequeñas */}
+     
       <div className="lg:hidden relative">
         <Menu>
           {({ open }) => (
             <>
-              {/* Botón del menú */}
+           
               <MenuButton className="p-2 rounded-md bg-gray-900 text-white hover:bg-white hover:text-black  border hover:border-black transition">
                 <Bars3Icon className="w-6 h-6" />
               </MenuButton>
 
-              {/* Menú desplegable con animación */}
+          
               <AnimatePresence>
                 {open && (
                   <MenuItems
@@ -77,10 +77,10 @@ const Navbar: React.FC = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    // transition={{ duration: 0.2 }}
+                  
                     className="absolute right-0 mt-2 w-48 origin-top-right rounded-lg border border-gray-200  bg-white shadow-md focus:outline-none"
                   >
-                    {["Home", "About", "Projects", "Contact"].map((item, index) => (
+                    {["Inicio", "Sobre mi", "Proyectos", "Contacto"].map((item, index) => (
                       <MenuItem key={index}>
                         {({ active }) => (
                           <motion.a

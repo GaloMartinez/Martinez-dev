@@ -5,7 +5,7 @@ import ProjectsGrid from "@/components/ProjectsGrid";
 
 const Proyectos = () => {
   return (
-    <div id="projects" >
+    <div id="proyectos" >
     <ProjectsGrid />
     </div>
   );

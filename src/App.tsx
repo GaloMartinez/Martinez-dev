@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Proyectos/>
       <Contact/>
       <Footer/>
-      {/* Aquí irán las secciones */}
+      
     </div>
   );
 };

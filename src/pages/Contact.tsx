@@ -1,12 +1,18 @@
 import { motion, useInView } from "framer-motion";
 import { FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser"; 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 const ContactForm = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px" });
 
   const [scrollDirection, setScrollDirection] = useState("down");
+
   let lastScrollY = typeof window !== "undefined" ? window.scrollY : 0;
 
   useEffect(() => {
@@ -19,14 +25,65 @@ const ContactForm = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  
+
+
+
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    if (!form.current) return; 
+  
+    emailjs
+      .sendForm(
+        "service_ouqnegv",
+        "template_kzfga72",
+        form.current, 
+        "OpnB1q9SZaAPuGkBQ"
+      )
+      .then(
+        () => {
+          toast.success("¡Mensaje enviado con éxito! ✅", {
+            
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+  
+          form.current?.reset(); 
+        },
+        (error) => {
+          toast.error("❌ Ocurrió un error. Inténtalo de nuevo.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+  
+          console.error("Error al enviar mensaje:", error);
+        }
+      );
+  };
+
   return (
     <section
-      id="contact"
+      id="contacto"
       ref={ref}
-      className="flex justify-center items-center w-full py-16 h-screen px-14 sm:px-20 2xl:px-96  "
+      className="flex justify-center items-center w-full py-16 h-screen px-14 sm:px-20 2xl:px-96"
     >
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 w-full max-w-5xl ">
-        {/* Imagen */}
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 w-full max-w-5xl">
+      
         <motion.div
           className="w-full xl:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: -50 }}
@@ -36,11 +93,11 @@ const ContactForm = () => {
           <img
             src="/assets/img/ContactCoding.jpeg"
             alt="Contacto"
-            className="rounded-lg shadow-md w-full  xl:h-auto object-cover max-w-md"
+            className="rounded-lg shadow-md w-full xl:h-auto object-cover max-w-md"
           />
         </motion.div>
 
-        {/* Formulario */}
+       
         <motion.div
           className="w-full xl:w-1/2"
           initial={{ opacity: 0, x: 50 }}
@@ -49,17 +106,17 @@ const ContactForm = () => {
         >
           <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">Contacto</h1>
           <p className="text-gray-600 mt-2 sm:mt-4 mb-6 text-lg sm:text-lg 2xl:text-xl">
-            ¿Tenes algún proyecto en mente? Hagámoslo realidad.
+            ¿Tienes algún proyecto en mente? Hagámoslo realidad.
           </p>
 
-          {/* Datos de contacto */}
+         
           <motion.div
             className="space-y-2 mb-6"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="flex items-center space-x-3 ">
+            <div className="flex items-center space-x-3">
               <FaPhoneAlt className="text-gray-600" />
               <p className="text-lg sm:text-lg xl:text-xl text-gray-700">+54 11 3791-8640</p>
             </div>
@@ -84,40 +141,33 @@ const ContactForm = () => {
             </div>
           </motion.div>
 
-          {/* Campos del formulario */}
+          
           <motion.form
+            ref={form}
+            onSubmit={sendEmail}
             className="sm:mt-14 space-y-2"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: 20 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <div className="flex gap-2">
-              <input
-                type="text"
-                placeholder="Nombre"
-                className="w-1/2 p-3 text-sm border rounded-md bg-gray-100"
-              />
-              <input
-                type="email"
-                placeholder="E-mail"
-                className="w-1/2 p-3 text-sm border rounded-md bg-gray-100"
-              />
+              <input type="text" name="from_name" placeholder="Nombre" className="w-1/2 p-3 text-sm border rounded-md bg-gray-100" required />
+              <input type="email" name="from_email" placeholder="E-mail" className="w-1/2 p-3 text-sm border rounded-md bg-gray-100" required />
             </div>
-            <textarea
-              placeholder="Mensaje"
-              className="w-full p-3 text-sm border rounded-md bg-gray-100 sm:h-28"
-            ></textarea>
+            <textarea name="message" placeholder="Mensaje" className="w-full p-3 text-sm border rounded-md bg-gray-100 sm:h-28" required></textarea>
 
-            {/* Botón de envío */}
+           
             <motion.button
               type="submit"
-              className="w-full bg-black text-white font-semibold py-3 rounded-md   hover:bg-white hover:text-black  border hover:border-black transition"
+              className="w-full bg-black text-white font-semibold py-3 rounded-md hover:bg-white hover:text-black border hover:border-black transition"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.95 }}
             >
               Enviar mensaje
             </motion.button>
           </motion.form>
+
+          <ToastContainer />
         </motion.div>
       </div>
     </section>

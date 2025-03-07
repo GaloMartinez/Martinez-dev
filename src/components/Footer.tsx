@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.3 }}
     >
-      {/* Logo a la izquierda */}
+      
       <motion.a
         href="#home"
-        className="text-3xl w-[290px] flex flex-row justify-center font-bold tracking-wide"
+        className="text-3xl w-[210px] flex flex-row justify-center xl:justify-start font-bold tracking-wide"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -22,14 +22,14 @@ const Footer: React.FC = () => {
         GM.
       </motion.a>
 
-      {/* Enlaces de navegación al centro */}
+      
       <motion.div
-        className="flex space-x-6 text-gray-400 text-lg"
+        className="flex space-x-6 text-gray-400 text-sm sm:text-lg"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        {["Home", "About", "Projects", "Contact"].map((text, index) => (
+        {["Inicio", "Sobre mi", "Proyectos", "Contacto"].map((text, index) => (
           <motion.a
             key={index}
             href={`#${text.toLowerCase()}`}
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         ))}
       </motion.div>
 
-      {/* Redes Sociales con Tooltip a la derecha */}
+    
       <motion.div
         className="flex space-x-6 text-xl"
         initial={{ opacity: 0, y: 20 }}

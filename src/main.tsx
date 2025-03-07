@@ -27,7 +27,6 @@ root.render(
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">
           <QueryClientProvider client={queryClient}>
         
-              {/* AQUI RouterProvider envuelve todo */}
           <App/>
               <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
           
