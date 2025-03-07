@@ -1,62 +1,60 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Tooltip from "./Tooltip";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#2A2A2B] text-white w-full py-6">
-      <div className="container mx-auto flex flex-col sm:flex-row lg:flex-row justify-between items-center px-16 sm:px-20 lg:px-16">
+    <motion.footer
+      className="w-full mt-28 bg-black text-white space-y-16 xl:space-y-0  py-12 xl:py-16 px-14 sm:px-20 2xl:px-96 flex flex-col xl:flex-row items-center justify-between "
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.3 }}
+    >
+      {/* Logo a la izquierda */}
+      <motion.a
+        href="#home"
+        className="text-3xl w-[290px] flex flex-row justify-center font-bold tracking-wide"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        GM.
+      </motion.a>
 
-        <div className="flex items-center justify-center lg:justify-start mb-6 lg:mb-0">
-          <img
-            src="/assets/img/consumidores-damnificados/footer-logo.png"
-            alt="Consumidores Damnificados"
-            className="w-[180px] object-contain"
-          />
-        </div>
-
-
-        <div className="text-center text-sm text-gray-400 flex flex-col lg:flex-row lg:items-center lg:gap-4">
-          <span className="text-white font-medium">Enlaces Relacionados:</span>
-          {[
-            { name: "ssn.gov.ar", url: "https://www.ssn.gov.ar" },
-            { name: "enre.gov.ar", url: "https://www.enre.gov.ar" },
-            { name: "enargas.gov.ar", url: "https://www.enargas.gov.ar" },
-            { name: "cns.gov.ar", url: "https://www.cns.gov.ar" },
-            { name: "cnrt.gov.ar", url: "https://www.cnrt.gov.ar" },
-          ].map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-
-
-        <div className="flex items-center gap-4 mt-6 lg:mt-0">
-          <a
-            href="https://www.facebook.com/consumidoresdamnificados"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white p-2 rounded-full text-[#2A2A2B] hover:bg-gray-300 transition text-xl w-10 h-10 flex items-center justify-center"
+      {/* Enlaces de navegación al centro */}
+      <motion.div
+        className="flex space-x-6 text-gray-400 text-lg"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {["Home", "About", "Projects", "Contact"].map((text, index) => (
+          <motion.a
+            key={index}
+            href={`#${text.toLowerCase()}`}
+            className="relative group"
+            whileHover={{ y: -3 }}
+            transition={{ duration: 0.2 }}
           >
-            <FaFacebookF />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white p-2 rounded-full text-[#2A2A2B] hover:bg-gray-300 transition text-xl w-10 h-10 flex items-center justify-center"
-          >
-            <FaLinkedinIn />
-          </a>
-        </div>
-      </div>
-    </footer>
+            {text}
+            <motion.span
+              className="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"
+            />
+          </motion.a>
+        ))}
+      </motion.div>
+
+      {/* Redes Sociales con Tooltip a la derecha */}
+      <motion.div
+        className="flex space-x-6 text-xl"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Tooltip />
+      </motion.div>
+    </motion.footer>
   );
 };
 

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Proyectos from "./pages/Proyectos";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <AboutMe/>
       <Proyectos/>
       <Contact/>
+      <Footer/>
       {/* Aquí irán las secciones */}
     </div>
   );
