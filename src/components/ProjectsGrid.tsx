@@ -12,7 +12,7 @@ const projects = [
 ];
 
 const ProjectsGrid = () => {
-  const ref = useRef<HTMLDivElement | null>(null); 
+  const ref = useRef<HTMLDivElement | null>(null);
   const [isInView, setIsInView] = useState(false);
   const [scrollDirection, setScrollDirection] = useState("down");
 
@@ -24,7 +24,7 @@ const ProjectsGrid = () => {
       setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
       lastScrollY = currentScrollY;
 
-     
+
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
@@ -40,8 +40,8 @@ const ProjectsGrid = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 px-72">
-     
+    <section ref={ref} className="py-36 px-14 sm:px-20 2xl:px-96">
+
       {/* Contenedor de la grilla con animación en función del scroll */}
       <motion.div
 
@@ -49,8 +49,8 @@ const ProjectsGrid = () => {
         animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: 50 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
- <h1 className="text-6xl font-bold text-black text-center mb-20">Mis Proyectos</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-48 gap-y-16">
+        <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black text-center mb-20">Mis Proyectos</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 2xl:gap-12 gap-y-16">
           {projects.map((project, index) => (
             <motion.div
               key={index}

@@ -30,11 +30,11 @@ const TechSlider = () => {
   );
 
   return (
-    <div ref={emblaRef} className="overflow-hidden mt-6 w-[650px]">
-    <div className="flex">
+    <div ref={emblaRef} className="overflow-hidden mt-6 w-[300px] sm:w-[650px] xl:w-[600px]">
+    <div className="flex flex-row justify-start items-center  w-full">
       {/* Se duplican los íconos para un loop sin cortes */}
       {[...techIcons, ...techIcons].map(({ Icon, color }, index) => (
-        <div key={index} className="flex-shrink-0 mx-2 w-20 flex justify-center">
+        <div key={index} className="flex-shrink-0 mx-6 w-20  flex justify-center">
           <Icon size={48} className={`${color}`} />
         </div>
       ))}

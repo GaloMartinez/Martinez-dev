@@ -31,18 +31,18 @@ const AboutMe: React.FC = () => {
   }, []);
 
   return (
-    <section id="about" ref={ref} className="w-full py-16 h-screen bg-gray-100 flex justify-center">
-      <div className="flex flex-col md:flex-row-reverse items-center gap-10 px-72">
+    <section id="about" ref={ref} className="w-full py-16 h-screen bg-gray-100 flex justify-center  ">
+      <div className="flex flex-col-reverse  xl:flex-row-reverse items-center gap-10 px-14 sm:px-20 2xl:px-96">
         
         {/* Contenido de texto con animación según la dirección del scroll */}
         <motion.div
-          className="md:w-1/2 px-20"
+          className=" xl:w-1/2  "
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: -50 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-6xl font-bold text-black">Sobre Mi</h1>
-          <p className="mt-4 text-xl text-gray-600">
+          <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">Sobre Mi</h1>
+          <p className="mt-4 text-lg sm:text-lg 2xl:text-xl text-gray-600">
             Soy un <strong>desarrollador frontend</strong> con experiencia en <strong>JavaScript, TypeScript, React y .NET</strong>,
             especializado en la creación de páginas web dinámicas, intuitivas y eficientes.
             Me apasiona desarrollar soluciones digitales con un enfoque en el rendimiento,
@@ -55,8 +55,8 @@ const AboutMe: React.FC = () => {
               href="https://linkedin.com/in/tuusuario" 
               target="_blank" 
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }} 
-              className="flex items-center bg-white shadow-md rounded-lg px-4 py-2 text-gray-900 hover:text-gray-800 transition"
+              whileHover={{ scale: 1.01 }}
+              className="flex items-center bg-white shadow-md rounded-lg px-4 py-2 text-gray-900 hover:bg-white hover:text-black  border hover:border-black transition"
             >
               <FaLinkedin size={20} className="mr-2" />
               LinkedIn
@@ -66,19 +66,19 @@ const AboutMe: React.FC = () => {
               href="https://github.com/tuusuario" 
               target="_blank" 
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }} 
-              className="flex items-center bg-white shadow-md rounded-lg px-4 py-2 text-gray-900 hover:text-gray-800 transition"
+              whileHover={{ scale: 1.01 }}
+              className="flex items-center bg-white shadow-md rounded-lg px-4 py-2 text-gray-900 hover:bg-white hover:text-black  border hover:border-black transition"
             >
               <FaGithub size={20} className="mr-2" />
               GitHub
             </motion.a>
           </div>
-          <TechSlider />
+          <TechSlider/>
         </motion.div>
 
         {/* Imagen con animación según la dirección del scroll */}
         <motion.div
-          className="md:w-1/2 flex justify-center"
+          className="xl:w-1/2 flex justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : scrollDirection === "up" ? { opacity: 0, scale: 0.8 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
@@ -86,7 +86,7 @@ const AboutMe: React.FC = () => {
           <img
             src="/public/assets/img/img-aboutme.jpg"
             alt="About me"
-            className="w-full h-150 object-cover rounded-lg shadow-lg"
+            className=" w-full h-150 object-cover rounded-lg shadow-lg"
           />
         </motion.div>
 
