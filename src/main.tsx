@@ -29,11 +29,11 @@ root.render(
       <StrictMode>
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">
           <QueryClientProvider client={queryClient}>
-            <SnackbarProvider>
+        
               {/* AQUI RouterProvider envuelve todo */}
           <App/>
               <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
-            </SnackbarProvider>
+          
           </QueryClientProvider>
         </LocalizationProvider>
       </StrictMode>

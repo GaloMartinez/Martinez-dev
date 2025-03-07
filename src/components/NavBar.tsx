@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
           {({ open }) => (
             <>
               {/* Botón del menú */}
-              <MenuButton className="p-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition">
+              <MenuButton className="p-2 rounded-md bg-gray-900 text-white hover:bg-white hover:text-black  border hover:border-black transition">
                 <Bars3Icon className="w-6 h-6" />
               </MenuButton>
 
@@ -78,14 +78,14 @@ const Navbar: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-48 origin-top-right rounded-lg border border-gray-200 bg-white shadow-md focus:outline-none"
+                    className="absolute right-0 mt-2 w-48 origin-top-right rounded-lg border border-gray-200  bg-white shadow-md focus:outline-none"
                   >
                     {["Home", "About", "Projects", "Contact"].map((item, index) => (
                       <MenuItem key={index}>
                         {({ active }) => (
                           <motion.a
                             href={`#${item.toLowerCase()}`}
-                            className={`block px-4 py-2 text-gray-900 ${
+                            className={`block px-4 py-2 text-gray-900  ${
                               active ? "bg-gray-100" : ""
                             }`}
                             initial={{ opacity: 0, y: -10 }}
