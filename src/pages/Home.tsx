@@ -18,7 +18,7 @@ export default function Home() {
         muted
         playsInline
       >
-        <source src="/public/assets/video/video2.mp4" type="video/mp4" />
+        <source src="/assets/video/video2.mp4" type="video/mp4" />
         Tu navegador no soporta el video.
       </video>
 
