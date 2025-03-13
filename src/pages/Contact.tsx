@@ -93,7 +93,7 @@ const ContactForm = () => {
           <img
             src="/assets/img/ContactCoding.jpeg"
             alt="Contacto"
-            className="rounded-lg shadow-md w-full sm:h-96 xl:h-auto object-cover "
+            className="rounded-lg shadow-md w-full h-60 sm:h-96 xl:h-auto object-cover "
           />
         </motion.div>
 
