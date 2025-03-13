@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import StyledButton from "../components/ui/StyledButton"
 
 
 const ContactForm = () => {
@@ -157,14 +157,14 @@ const ContactForm = () => {
             <textarea name="message" placeholder="Mensaje" className="w-full p-3 text-sm border rounded-md bg-gray-100 sm:h-28" required></textarea>
 
            
-            <motion.button
+            <StyledButton 
               type="submit"
-              className="w-full bg-black text-white font-semibold py-3 rounded-md hover:bg-white hover:text-black border hover:border-black transition"
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.95 }}
+              className="w-full bg-white text-black font-semibold py-3 rounded-md  hover:text-white border border-black shadow-md"
+             
+             
             >
               Enviar mensaje
-            </motion.button>
+            </StyledButton>
           </motion.form>
 
           <ToastContainer />

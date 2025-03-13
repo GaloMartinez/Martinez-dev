@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           >
             <motion.a
               href={`#${text.toLowerCase()}`}
-              className="block hover:text-[#40aac4] transition relative"
+              className="block hover:text-white transition relative"
               initial={{ y: 0 }}
               whileHover={{ y: "-10%" }}
               transition={{ duration: 0.1 }}

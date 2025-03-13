@@ -49,7 +49,7 @@ const ProjectsGrid = () => {
         animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: 50 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black text-center mb-20">Mis Proyectos</h1>
+        <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black text-center mb-20">Mis proyectos</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 2xl:gap-12 gap-y-16">
           {projects.map((project, index) => (
             <motion.div

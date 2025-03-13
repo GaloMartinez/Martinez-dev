@@ -2,6 +2,8 @@ import TechSlider from "@/components/TechSlider";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
+import StyledButton from "../components/ui/StyledButton"
+
 
 const AboutMe: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -41,44 +43,47 @@ const AboutMe: React.FC = () => {
           animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: -50 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">Sobre Mi</h1>
-          <p className="mt-4 text-lg sm:text-lg 2xl:text-xl text-gray-600">
-            Soy un <strong>desarrollador Frontend</strong> con experiencia en <strong>JavaScript, TypeScript, React y .NET</strong>,
-            especializado en la creación de páginas web dinámicas, intuitivas y eficientes.
-            Me apasiona desarrollar soluciones digitales con un enfoque en el rendimiento,
-            la accesibilidad y una excelente experiencia de usuario.
+          <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">Sobre mi</h1>
+          <p className="mt-4 text-lg sm:text-lg 2xl:text-xl text-justify text-gray-600">
+          Soy un <strong>desarrollador Frontend</strong> con experiencia en <strong>JavaScript, TypeScript, React y .NET</strong>, 
+          especializado en la creación de páginas web dinámicas, intuitivas y eficientes. 
+          Para el diseño y la maquetación, utilizo <strong>CSS, TailwindCSS y Bootstrap</strong>, 
+          asegurando interfaces modernas y responsivas. Además, implemento <strong>Firebase</strong> para autenticación, 
+          base de datos en tiempo real y otras funcionalidades backend, 
+           manejo <strong>SQL</strong> para la gestión eficiente de datos, 
+          optimizando el rendimiento y la experiencia del usuario.
           </p>
 
           
           <div className="flex justify-center md:justify-start gap-4 mt-6">
-            <motion.a 
+          <StyledButton 
               href="https://www.linkedin.com/in/galomartinez1/" 
               target="_blank" 
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.01 }}
-              className="flex items-center bg-white shadow-md rounded-lg px-4 py-2 text-gray-900 hover:bg-white hover:text-black  border hover:border-black transition"
+           
+              className="flex items-center bg-white shadow-md rounded-md px-4 py-2 text-gray-900 hover:text-white    transition"
             >
               <FaLinkedin size={20} className="mr-2" />
               LinkedIn
-            </motion.a>
+            </StyledButton> 
 
-            <motion.a 
+            <StyledButton 
               href="https://github.com/GaloMartinez" 
               target="_blank" 
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.01 }}
-              className="flex items-center bg-white shadow-md rounded-lg px-4 py-2 text-gray-900 hover:bg-white hover:text-black  border hover:border-black transition"
+             
+              className="flex items-center bg-white shadow-md rounded-md px-4 py-2 text-gray-900  hover:text-white   transition"
             >
               <FaGithub size={20} className="mr-2" />
               GitHub
-            </motion.a>
+            </StyledButton> 
           </div>
           <TechSlider/>
         </motion.div>
 
         
         <motion.div
-          className="xl:w-1/2 flex justify-center"
+          className="xl:w-1/2 flex justify-center h-2/4"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : scrollDirection === "up" ? { opacity: 0, scale: 0.8 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
