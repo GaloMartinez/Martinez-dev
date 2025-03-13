@@ -80,7 +80,7 @@ const ContactForm = () => {
     <section
       id="contacto"
       ref={ref}
-      className="flex justify-center items-center w-full py-16 h-screen px-14 sm:px-20 2xl:px-96"
+      className="flex justify-center items-center w-full py-16 h-screen px-14 sm:px-20 2xl:px-96 "
     >
       <div className="flex flex-col xl:flex-row justify-center items-center gap-10 w-full max-w-5xl">
       
@@ -93,7 +93,7 @@ const ContactForm = () => {
           <img
             src="/assets/img/ContactCoding.jpeg"
             alt="Contacto"
-            className="rounded-lg shadow-md w-full xl:h-auto object-cover max-w-md"
+            className="rounded-lg shadow-md w-full sm:h-96 xl:h-auto object-cover "
           />
         </motion.div>
 
@@ -104,7 +104,7 @@ const ContactForm = () => {
           animate={isInView ? { opacity: 1, x: 0 } : scrollDirection === "up" ? { opacity: 0, x: 50 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black">Contacto</h1>
+          <h1 className="text-4xl sm:text-4xl 2xl:text-6xl font-bold text-black">Contacto</h1>
           <p className="text-gray-600 mt-2 sm:mt-4 mb-6 text-lg sm:text-lg 2xl:text-xl">
             ¿Tienes algún proyecto en mente? Hagámoslo realidad.
           </p>

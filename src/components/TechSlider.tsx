@@ -34,7 +34,7 @@ const TechSlider = () => {
     <div className="flex flex-row justify-start items-center  w-full">
       
       {[...techIcons, ...techIcons].map(({ Icon, color }, index) => (
-        <div key={index} className="flex-shrink-0 mx-6 w-20  flex justify-center">
+        <div key={index} className="flex-shrink-0 mx-4  xl:mx-6 w-20  flex justify-center">
           <Icon size={48} className={`${color}`} />
         </div>
       ))}

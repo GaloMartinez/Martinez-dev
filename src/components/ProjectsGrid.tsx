@@ -3,12 +3,13 @@ import { useEffect, useRef, useState } from "react";
 import { CardTitle } from "./ui/card";
 
 const projects = [
+  { title: "Consumidores Damnificados", description: "Web de noticias de estudio juridico con panel administrativo", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidores-damnificados.web.app/" },
   { title: "APM Abogados", description: "Tienda online con React, Tailwind y Firebase.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
   { title: "La bella pizza italiana", description: "Web gastronomica realizada con React, Bootstrap y Firebase", image: "/assets/img/gastronomic-restaurant.png", link: "https://gastronomic-restaurant.netlify.app/" },
   { title: "Vexa Soluciones", description: "Web realizada con React y Css", image: "/assets/img/vexa-software.png", link: "https://vexasoftware.netlify.app/" },
   { title: "Destileria Fernandez Latino", description: "Web destileria realizada con React y CSS", image: "/assets/img/proyecto-destileria.png", link: "https://destileriafernandezlatino.com" },
   { title: "Moviesflix", description: "Web trailers realizada con React y Bootstrap", image: "/assets/img/moviesflix.jpg", link: "https://trailersmoviesapp.netlify.app" },
-  { title: "Detailing Shop", description: "E-commerce realizado con Javascript, Tailwind y Firebase", image: "/assets/img/detailingshop.png", link: "https://detailingshop.netlify.app/" },
+  
 ];
 
 const ProjectsGrid = () => {
@@ -49,7 +50,7 @@ const ProjectsGrid = () => {
         animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: 50 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h1 className="text-4xl sm:text-5xl 2xl:text-6xl font-bold text-black text-center mb-20">Mis proyectos</h1>
+        <h1 className="text-4xl sm:text-4xl 2xl:text-6xl font-bold text-black text-center mb-20">Mis proyectos</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 2xl:gap-12 gap-y-16">
           {projects.map((project, index) => (
             <motion.div
