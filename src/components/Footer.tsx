@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     >
       
       <motion.a
-        href="#home"
+        href="#inicio"
         className="text-3xl w-[210px] flex flex-row justify-center xl:justify-start font-bold tracking-wide"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
