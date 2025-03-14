@@ -33,7 +33,7 @@ const AboutMe: React.FC = () => {
   }, []);
 
   return (
-    <section id="sobre mi" ref={ref} className="w-full py-20 h-screen bg-gray-100 flex justify-center px-14 sm:px-20 2xl:px-96 ">
+    <section id="sobre mi" ref={ref} className="w-full py-20 h-screen bg-white flex justify-center px-14 sm:px-20 2xl:px-96 ">
       <div className="flex flex-col-reverse  xl:flex-row-reverse items-center gap-10 ">
         
        
