@@ -57,12 +57,7 @@ export default {
   			}
   		},
   		fontFamily: {
-  			serif: [
-  				'serif'
-  			],
-  			sans: [
-  				'Roboto'
-  			]
+			sans: ['Inter', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
