@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { CardTitle } from "./ui/card";
 
 const projects = [
-  { title: "Consumidores Damnificados", description: "Web de noticias de estudio juridico con panel administrativo", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidores-damnificados.web.app/" },
-  { title: "APM Abogados", description: "Tienda online con React, Tailwind y Firebase.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
-  { title: "La bella pizza italiana", description: "Web gastronomica realizada con React, Bootstrap y Firebase", image: "/assets/img/gastronomic-restaurant.png", link: "https://gastronomic-restaurant.netlify.app/" },
-  { title: "Vexa Soluciones", description: "Web realizada con React y Css", image: "/assets/img/vexa-software.png", link: "https://vexasoftware.netlify.app/" },
-  { title: "Destileria Fernandez Latino", description: "Web destileria realizada con React y CSS", image: "/assets/img/proyecto-destileria.png", link: "https://destileriafernandezlatino.com" },
-  { title: "Moviesflix", description: "Web trailers realizada con React y Bootstrap", image: "/assets/img/moviesflix.jpg", link: "https://trailersmoviesapp.netlify.app" },
+  { title: "Consumidores Damnificados", description: "Web Consumidores Damnificados con panel administrativo - Typescript, React, TailwindCss y Firebase", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidores-damnificados.web.app/" },
+  { title: "APM Abogados", description: "Web APM Abogados - Typescript, React, TailwindCss y Firebase", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
+  { title: "La bella pizza italiana", description: "Web gastronomica - Javascript, React, Bootstrap y Firebase", image: "/assets/img/gastronomic-restaurant.png", link: "https://gastronomic-restaurant.netlify.app/" },
+  { title: "Vexa Soluciones", description: "Web Vexa - Javascript, React y Css", image: "/assets/img/vexa-software.png", link: "https://vexasoftware.netlify.app/" },
+  { title: "Destileria Fernandez Latino", description: "Web Destileria Fernandez Latino - Javascript, React y CSS", image: "/assets/img/proyecto-destileria.png", link: "https://destileriafernandezlatino.com" },
+  { title: "Moviesflix", description: "Web trailers - Javascript, React y Bootstrap", image: "/assets/img/moviesflix.jpg", link: "https://trailersmoviesapp.netlify.app" },
   
 ];
 
