@@ -18,19 +18,19 @@ const Navbar: React.FC = () => {
   return (
     <motion.nav
       className={`w-full fixed top-0 left-0 z-50 flex justify-between items-center px-14 sm:px-20 2xl:px-96 transition-all duration-300 ${
-        scrolled ? "h-14 bg-white shadow-md" : "h-16 bg-transparent"
+        scrolled ? "h-24 bg-white shadow-md" : "h-24 bg-transparent"
       }`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* LOGO */}
-      <a href="#inicio" className="text-3xl font-bold text-gray-900">
+      <a href="#inicio" className=" text-3xl xl:text-5xl font-bold text-gray-900">
         GM.
       </a>
 
       {/* NAV LINKS */}
-      <div className="hidden lg:flex space-x-8 text-lg font-medium">
+      <div className="hidden lg:flex space-x-8 text-xl font-medium">
         {["Inicio", "Sobre mi", "Proyectos", "Contacto"].map((text, index) => (
           <motion.div
             key={index}
