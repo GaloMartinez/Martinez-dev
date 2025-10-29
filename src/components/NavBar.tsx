@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.nav
-      className={`w-full fixed top-0 left-0 z-50 flex justify-between items-center px-14 sm:px-20 2xl:px-96 transition-all duration-300 ${
+      className={`w-full fixed top-0 left-0 z-50 flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-28 transition-all duration-300 ${
         scrolled ? "h-24 bg-white shadow-md" : "h-24 bg-transparent"
       }`}
       initial={{ opacity: 0, y: -50 }}

@@ -5,7 +5,7 @@ import Tooltip from "./Tooltip";
 const Footer: React.FC = () => {
   return (
     <motion.footer
-      className="w-full mt-28 bg-black text-white space-y-16 xl:space-y-0  py-12 xl:py-16 px-14 sm:px-20 2xl:px-96 flex flex-col xl:flex-row items-center justify-between "
+      className="w-full mt-28 bg-black text-white space-y-16 xl:space-y-0  py-12 xl:py-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-28 flex flex-col xl:flex-row items-center justify-between "
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

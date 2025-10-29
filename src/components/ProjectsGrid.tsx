@@ -3,12 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import { CardTitle } from "./ui/card";
 
 const projects = [
-  { title: "Consumidores Damnificados", description: "Web Consumidores Damnificados con panel administrativo - Typescript, React, TailwindCss y Firebase", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidores-damnificados.web.app/" },
-  { title: "APM Abogados", description: "Web APM Abogados - Typescript, React, TailwindCss y Firebase", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
-  { title: "La bella pizza italiana", description: "Web gastronomica - Javascript, React, Bootstrap y Firebase", image: "/assets/img/gastronomic-restaurant.png", link: "https://gastronomic-restaurant.netlify.app/" },
-  { title: "Vexa Soluciones", description: "Web Vexa - Javascript, React y Css", image: "/assets/img/vexa-software.png", link: "https://vexasoftware.netlify.app/" },
-  { title: "Destileria Fernandez Latino", description: "Web Destileria Fernandez Latino - Javascript, React y CSS", image: "/assets/img/proyecto-destileria.png", link: "https://destileriafernandezlatino.com" },
-  { title: "Moviesflix", description: "Web trailers - Javascript, React y Bootstrap", image: "/assets/img/moviesflix.jpg", link: "https://trailersmoviesapp.netlify.app" },
+  { title: "Solstice Air", description: "Broker de vuelos privados - Typescript, React y TailwindCss.", image: "/assets/img/solstice-air.png", link: "https://www.solsticeaircharter.com/" },
+  { title: "Casa estudio Bilbilian", description: "Estudio de abogados - Typescript, React, TailwindCss.", image: "/assets/img/casa-estudio.png", link: "https://casadeestudio.org/" },
+  { title: "Golf Club Eventos", description: "Salon de eventos - Typescript, React y TailwindCss.", image: "/assets/img/golf-club-eventos.png", link: "https://golfclubeventos.com.ar/" },
+  { title: "APM Abogados", description: "Estudio de abogados - Typescript, React, TailwindCss.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
+  { title: "Consumidores Damnificados", description: "Asociacion civil - Typescript, React, TailwindCss.", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidoresdamnificados.org.ar/" },
+  { title: "Vexa Software", description: " Web Vexa - Typescript, React y Tailwindcss.", image: "/assets/img/vexa-software.png", link: "https://www.vexa.software/" },
+ 
+ 
   
 ];
 
@@ -41,7 +43,7 @@ const ProjectsGrid = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-36 px-14 sm:px-20 2xl:px-96">
+    <section ref={ref} className="py-36 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-28">
 
    
       <motion.div

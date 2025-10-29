@@ -23,7 +23,7 @@ export default function Home() {
       </video>
 
       {/* Contenido */}
-      <div className="relative z-10 px-14 sm:px-20 2xl:px-96 text-black">
+      <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-28 text-black">
         <motion.div
           className=" sm:w-3/4 xl:w-2/4 2xl:w-1/2   rounded-lg "
           initial={{ opacity: 0, x: -150 }}

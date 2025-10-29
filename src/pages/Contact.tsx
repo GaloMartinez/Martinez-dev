@@ -80,12 +80,12 @@ const ContactForm = () => {
     <section
       id="contacto"
       ref={ref}
-      className="flex justify-center items-center w-full py-16 h-screen px-14 sm:px-20 2xl:px-96 "
+      className="w-full py-16 md:py-20 lg:py-24 bg-white flex justify-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-28"
     >
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-10 w-full max-w-5xl">
+      <div className="flex flex-col xl:flex-row justify-center items-stretch gap-8 xl:gap-12 w-full max-w-7xl">
       
         <motion.div
-          className="w-full xl:w-1/2 flex justify-center"
+          className="w-full xl:w-1/2 flex justify-center items-center"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : scrollDirection === "up" ? { opacity: 0, x: -50 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -93,13 +93,13 @@ const ContactForm = () => {
           <img
             src="/assets/img/ContactCoding.jpeg"
             alt="Contacto"
-            className="rounded-lg shadow-md w-full h-48 sm:h-80 xl:h-auto object-cover "
+            className="rounded-lg shadow-md w-full h-full max-h-[600px] object-cover"
           />
         </motion.div>
 
        
         <motion.div
-          className="w-full xl:w-1/2"
+          className="w-full xl:w-1/2 flex flex-col justify-center"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : scrollDirection === "up" ? { opacity: 0, x: 50 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -145,23 +145,21 @@ const ContactForm = () => {
           <motion.form
             ref={form}
             onSubmit={sendEmail}
-            className="sm:mt-14 space-y-2"
+            className="mt-8 lg:mt-12 space-y-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : scrollDirection === "up" ? { opacity: 0, y: 20 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="flex gap-2">
-              <input type="text" name="from_name" placeholder="Nombre" className="w-1/2 p-3 text-sm border rounded-md bg-gray-100" required />
-              <input type="email" name="from_email" placeholder="E-mail" className="w-1/2 p-3 text-sm border rounded-md bg-gray-100" required />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input type="text" name="from_name" placeholder="Nombre" className="flex-1 p-4 text-sm border rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+              <input type="email" name="from_email" placeholder="E-mail" className="flex-1 p-4 text-sm border rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
             </div>
-            <textarea name="message" placeholder="Mensaje" className="w-full p-3 text-sm border rounded-md bg-gray-100 sm:h-28" required></textarea>
+            <textarea name="message" placeholder="Mensaje" className="w-full p-4 text-sm border rounded-md bg-gray-100 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" required></textarea>
 
            
             <StyledButton 
               type="submit"
-              className="w-full bg-white text-black font-semibold py-3 rounded-md  hover:text-white border border-black shadow-md"
-             
-             
+              className="w-full bg-white text-black font-semibold py-4 rounded-md hover:text-white border border-black shadow-md transition-all duration-300 hover:shadow-lg"
             >
               Enviar mensaje
             </StyledButton>
