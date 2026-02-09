@@ -3,12 +3,13 @@ import { useEffect, useRef, useState } from "react";
 import { CardTitle } from "./ui/card";
 
 const projects = [
+  { title: "Espumas Industriales", description: "Espumas Industriales - Typescript, React y Tailwindcss.", image: "/assets/img/espumas-industriales.png", link: "https://www.espumasindustriales.com.ar/" },
   { title: "Solstice Air", description: "Broker de vuelos privados - Typescript, React y TailwindCss.", image: "/assets/img/solstice-air.png", link: "https://www.solsticeaircharter.com/" },
   { title: "Casa estudio Bilbilian", description: "Estudio de abogados - Typescript, React, TailwindCss.", image: "/assets/img/casa-estudio.png", link: "https://casadeestudio.org/" },
   { title: "Golf Club Eventos", description: "Salon de eventos - Typescript, React y TailwindCss.", image: "/assets/img/golf-club-eventos.png", link: "https://golfclubeventos.com.ar/" },
   { title: "APM Abogados", description: "Estudio de abogados - Typescript, React, TailwindCss.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
   { title: "Consumidores Damnificados", description: "Asociacion civil - Typescript, React, TailwindCss.", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidoresdamnificados.org.ar/" },
-  { title: "Espumas Industriales", description: "Espumas Industriales - Typescript, React y Tailwindcss.", image: "/assets/img/espumas-industriales.png", link: "https://www.espumasindustriales.com.ar/" },
+  
  
  
   
