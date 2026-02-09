@@ -8,7 +8,7 @@ const projects = [
   { title: "Golf Club Eventos", description: "Salon de eventos - Typescript, React y TailwindCss.", image: "/assets/img/golf-club-eventos.png", link: "https://golfclubeventos.com.ar/" },
   { title: "APM Abogados", description: "Estudio de abogados - Typescript, React, TailwindCss.", image: "/assets/img/APM-Abogados.png", link: "http://apmabogados.com.ar" },
   { title: "Consumidores Damnificados", description: "Asociacion civil - Typescript, React, TailwindCss.", image: "/assets/img/Consumidores-damnificados.png", link: "https://consumidoresdamnificados.org.ar/" },
-  { title: "Vexa Software", description: " Web Vexa - Typescript, React y Tailwindcss.", image: "/assets/img/vexa-software.png", link: "https://www.vexa.software/" },
+  { title: "Espumas Industriales", description: "Espumas Industriales - Typescript, React y Tailwindcss.", image: "/assets/img/espumas-industriales.png", link: "https://www.espumasindustriales.com.ar/" },
  
  
   
